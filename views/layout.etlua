@@ -1,0 +1,28 @@
+<!-- views/layout.etlua -->
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title><%= page_title or "Fire Page" %></title>
+   <link rel="stylesheet" type="text/css" href="/static/styles/wikisheet.css" />
+</head>
+<body>
+   <div id="top_splash_two">
+      Fire in Vana'diel
+   </div>
+   <div id="nav_bar">
+      <a class="nav_button" href="<%= url_for( "home" ) %>" >
+         Home
+      </a>
+      <a class="nav_button">
+         Wiki
+      </a>
+      <a class="nav_button">
+         Forum
+      </a>
+      <a id="last_nav_button" class="nav_button">
+         About
+      </a>
+   </div>
+</body>
+</html>

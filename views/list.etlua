@@ -1,0 +1,7 @@
+<!-- views/list.etlua -->
+<h1>Here are myfavorite things</h1>
+<ol>
+   <% for i, thing in pairs( my_favourite_things ) do %>
+      <li><%= thing %></li>
+   <% end %>
+</ol>

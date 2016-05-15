@@ -1,0 +1,52 @@
+/* Style Sheet for the Basic Wiki */
+
+.home_button {
+   display:inline-block;
+   width:15%;
+   height:100px;
+/*   border:3px solid black; */
+   border-right:3px solid black;
+   color:black;
+   text-align:center;
+}
+
+a.nav_button {
+   text-decoration:none;
+   color:black;
+}
+
+#top_splash_two {
+   clear:both
+   position:fixed;
+   display:block;
+   height:100px;
+   border: 3px solid black;
+   border-radius:25px;
+   text-align:center;
+   font: 2em/100px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+#nav_bar {
+   display:block;
+   height:50px;
+   border:3px solid black;
+   border-radius:25px;
+   margin-top:15px;
+   text-align:center;
+}
+
+.nav_button {
+   display:inline-block;
+   height:50px;
+   width:auto;
+   padding-left:10px;
+   padding-right:10px;
+   margin:0px 0px 0px 0px;
+   border-right:3px solid black;
+   text-align:center;
+   font: 2em/50px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+#last_nav_button {
+   border-right:none;
+}
