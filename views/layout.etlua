@@ -3,18 +3,18 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <title><%= page_title or "Fire Page" %></title>
-   <link rel="stylesheet" type="text/css" href="/static/styles/wikisheet.css" />
+   <title><%= page_title or "QR2 Page" %></title>
+   <link rel="stylesheet" type="text/css" href="/static/styles/layoutsheet.css" />
 </head>
 <body>
    <div id="top_splash_two">
-      Fire in Vana'diel
+      QR Two
    </div>
    <div id="nav_bar">
       <a class="nav_button" href="<%= url_for( "home" ) %>" >
          Home
       </a>
-      <a class="nav_button">
+      <a class="nav_button" href="<%= url_for( "wiki" ) %>" >
          Wiki
       </a>
       <a class="nav_button">
@@ -24,5 +24,6 @@
          About
       </a>
    </div>
-</body>
+   <% render( "views." .. body ) %>
+</body> 
 </html>
