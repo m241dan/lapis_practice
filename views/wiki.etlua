@@ -1,0 +1,15 @@
+<!-- views/wiki.etlua -->
+
+<ul id="wiki_leftCol">
+   <% for index, wiki_entry in ipairs( wiki ) do %>
+      <% if( wiki_entry.name == params.page ) then selected = index; end %>
+      <li><a href="<%= url_for( "wiki" ) .. wiki_entry.name %>"> <%= string.gsub( wiki_entry.name, "_", " " ) %></li> </a>
+   <% end %>
+</ul>   
+<div id="wiki_body" >
+   <% if( not selected ) then %>
+      There has been an error... no entry with the name <%= params.page %>
+   <% else %>
+      <%= wiki[selected].content %>
+   <% end %>
+</div>
