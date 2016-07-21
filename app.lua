@@ -6,7 +6,6 @@ app:enable( "etlua" )
 app.layout = require( "views.layout" )
 
 app:match( "home", "/", function(self)
-   self.body = "home"
    return { render = true };
 end )
 
@@ -15,7 +14,6 @@ app:get( "/wiki", function(self)
 end )
 
 app:match( "wiki", "/wiki/:page", function(self)
-   self.body = "wiki"
    self.wiki = require( "static.wiki" )
    return { render = true };
 end )

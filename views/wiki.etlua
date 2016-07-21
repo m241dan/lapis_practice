@@ -1,15 +1,30 @@
 <!-- views/wiki.etlua -->
 
-<ul id="wiki_leftCol">
+<div id="wiki_leftCol">
    <% for index, wiki_entry in ipairs( wiki ) do %>
       <% if( wiki_entry.name == params.page ) then selected = index; end %>
-      <li><a href="<%= url_for( "wiki" ) .. wiki_entry.name %>"> <%= string.gsub( wiki_entry.name, "_", " " ) %></li> </a>
+      <a href="<%= url_for( "wiki" ) .. wiki_entry.name %>"> <%= string.gsub( wiki_entry.name, "_", " " ) %></a><br>
    <% end %>
-</ul>   
+</div>
 <div id="wiki_body" >
-   <% if( not selected ) then %>
+   <% if( not selected or not wiki[selected].content or not wiki[selected].content.body ) then %>
       There has been an error... no entry with the name <%= params.page %>
    <% else %>
-      <%= wiki[selected].content %>
+      <div id="wiki_text">
+         <h1 style="text-align:center;"><%= wiki[selected].name %></h1>
+         <ul id="toc">
+            <% for _,entry in ipairs( wiki[selected].content.body ) do %>
+               <li><a href="#<%= entry.anchor %>"><%= entry.anchor %></a><br></li>
+            <% end %>
+         </ul>
+         <% for _,entry in ipairs( wiki[selected].content.body ) do %>
+            <a name="<%= title %>"></a>
+            <h2><%= entry.anchor %></h2>
+            <p><%= entry.content %></p>
+         <% end %>
+      </div>
    <% end %>
+</div>
+<div id ="wiki_rightCol" >
+      <img src="<%= wiki[selected].content.image %>" id="wiki_img" >
 </div>
