@@ -63,14 +63,15 @@ a.nav_button {
 #wiki_body {
    margin-top:1%;
    float:left;
-   position:relative;
-   width:76.3em;
+   width:75.4em;
 }
 
 #wiki_rightCol {
    float:right;
-   width:30em;
    margin-top:1%;
+   width:30em;
+   height:25.77em;
+
 }
 
 #toc {
@@ -83,13 +84,14 @@ a.nav_button {
 #wiki_img {
    border: 3px solid black;
    border-radius:15px;
+   width:29.5em;
+   height:25.77em;
 }
 
 #wiki_text {
-   position:absolute;
-   left:1%;
-   top:0;
+   padding-left:1em;
+   float:left;
    overflow-y:auto;
-   width:77em;
+   width:75.4em;
    height:48em;
 }

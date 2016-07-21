@@ -11,7 +11,7 @@
       There has been an error... no entry with the name <%= params.page %>
    <% else %>
       <div id="wiki_text">
-         <h1 style="text-align:center;"><%= wiki[selected].name %></h1>
+         <h1 style="text-align:center; font-size:40px;"><%= wiki[selected].name %></h1>
          <ul id="toc">
             <% for _,entry in ipairs( wiki[selected].content.body ) do %>
                <li><a href="#<%= entry.anchor %>"><%= entry.anchor %></a><br></li>
@@ -19,8 +19,8 @@
          </ul>
          <% for _,entry in ipairs( wiki[selected].content.body ) do %>
             <a name="<%= title %>"></a>
-            <h2><%= entry.anchor %></h2>
-            <p><%= entry.content %></p>
+            <h2 style="font-size:30px;" ><%= entry.anchor %></h2>
+            <p style="font-size:22px;"><%= entry.content %></p>
          <% end %>
       </div>
    <% end %>
