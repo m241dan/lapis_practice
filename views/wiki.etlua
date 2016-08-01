@@ -20,11 +20,13 @@
          <% for _,entry in ipairs( wiki[selected].content.body ) do %>
             <a name="<%= title %>"></a>
             <h2 style="font-size:30px;" ><%= entry.anchor %></h2>
-            <p style="font-size:22px;"><%= entry.content %></p>
+            <p style="font-size:22px;"><%- entry.content %></p>
          <% end %>
       </div>
    <% end %>
 </div>
 <div id ="wiki_rightCol" >
+   <% if( wiki[selected].content.image ) then %>
       <img src="<%= wiki[selected].content.image %>" id="wiki_img" >
+   <% end %>
 </div>

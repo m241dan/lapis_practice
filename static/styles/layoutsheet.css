@@ -1,97 +1,137 @@
 /* Style Sheet for the Basic Wiki */
 
-.home_button {
-   display:inline-block;
-   width:15%;
-   height:100px;
-/*   border:3px solid black; */
-   border-right:3px solid black;
-   color:black;
+.home_button
+{
+    display: inline-block;
+
+    width: 15%;
+    height: 100px;
+
+    text-align: center;
+
+    color: black;
+    /*   border:3px solid black; */
+    border-right: 3px solid black;
+}
+
+a.nav_button
+{
+    text-decoration: none;
+
+    color: black;
+}
+
+#top_splash_two
+{
+    font: 2em/100px 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+
+    display: block;
+    clear: both
+    position:fixed;
+
+    height: 100px;
+
+    text-align: center;
+
+    border: 3px solid black;
+    border-radius: 25px;
+}
+
+#nav_bar
+{
+    display: block;
+
+    height: 50px;
+    margin-top: 15px;
+
+    text-align: center;
+
+    border: 3px solid black;
+    border-radius: 25px;
+}
+
+.nav_button
+{
+    font: 2em/50px 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+
+    display: inline-block;
+
+    width: auto;
+    height: 50px;
+    margin: 0 0 0 0;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    text-align: center;
+
+    border-right: 3px solid black;
+}
+
+#last_nav_button
+{
+    border-right: none;
+}
+
+#wiki_leftCol
+{
+    float: left;
+
+    width: 6em;
+    margin-top: 1%;
+    padding: 1%;
+
+    border: 3px solid black;
+    border-radius: 15px;
+}
+
+#wiki_body
+{
+    float: left;
+
+    width: 75.4em;
+    margin-top: 1%;
+}
+
+#wiki_rightCol
+{
+    float: right;
+
+    width: 30em;
+    height: 25.77em;
+    margin-top: 1%;
+}
+
+#toc
+{
+    font: 18px 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+
+    padding: 1%;
+
+    list-style-type: none;
+
+    text-align: center;
+}
+
+#wiki_img
+{
+    width: 29.5em;
+    height: 25.77em;
+
+    border: 3px solid black;
+    border-radius: 15px;
+}
+
+#wiki_text
+{
+    float: left;
+    overflow-y: auto;
+
+    width: 75.4em;
+    height: 48em;
+    padding-left: 1em;
+}
+
+#ability_tab tr td:nth-child(-n+3)
+{
    text-align:center;
-}
-
-a.nav_button {
-   text-decoration:none;
-   color:black;
-}
-
-#top_splash_two {
-   clear:both
-   position:fixed;
-   display:block;
-   height:100px;
-   border: 3px solid black;
-   border-radius:25px;
-   text-align:center;
-   font: 2em/100px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-}
-
-#nav_bar {
-   display:block;
-   height:50px;
-   border:3px solid black;
-   border-radius:25px;
-   margin-top:15px;
-   text-align:center;
-}
-
-.nav_button {
-   display:inline-block;
-   height:50px;
-   width:auto;
-   padding-left:10px;
-   padding-right:10px;
-   margin:0px 0px 0px 0px;
-   border-right:3px solid black;
-   text-align:center;
-   font: 2em/50px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-}
-
-#last_nav_button {
-   border-right:none;
-}
-
-#wiki_leftCol {
-   float:left;
-   border: 3px solid black;
-   border-radius:15px;
-   margin-top:1%;
-   padding:1%;
-   width:6em;
-}
-
-#wiki_body {
-   margin-top:1%;
-   float:left;
-   width:75.4em;
-}
-
-#wiki_rightCol {
-   float:right;
-   margin-top:1%;
-   width:30em;
-   height:25.77em;
-
-}
-
-#toc {
-   list-style-type:none;
-   font: 18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-   text-align:center;
-   padding:1%;
-}
-
-#wiki_img {
-   border: 3px solid black;
-   border-radius:15px;
-   width:29.5em;
-   height:25.77em;
-}
-
-#wiki_text {
-   padding-left:1em;
-   float:left;
-   overflow-y:auto;
-   width:75.4em;
-   height:48em;
 }
