@@ -2,6 +2,6 @@
 local config = require("lapis.config")
 
 config("development", {
-  port = 9090,
+  port = 80,
   greeting = "Hello world"
 })

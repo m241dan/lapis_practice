@@ -24,9 +24,9 @@ warrior_abilities = [[
    </tr>
    <tr>
       <td>Fury</td><td>1</td><td>Passive</td>
-      <td>Fury is basically a new resource exclusively to Warriors. It is a resource in the same way that
+      <td>Fury is basically a new resource exclusive to Warriors. It is a resource in the same way that
  mana or tp is a resource. A warrior will gain Fury every time he or she receives or deals damage. The 
-amount gained will be 20% of damage taken, or dealt, or 25 whichever is greater. Fury will be pushed 
+amount gained will be 20% of damage taken, or dealt, or 25 whichever is less. Fury will be pushed 
 to the client as mana. As such, it will be represented by the mana bar. However, things like mana
  equipment or refresh will not increase Fury.</td>
    </tr>
