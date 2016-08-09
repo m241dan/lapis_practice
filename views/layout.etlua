@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <title><%= page_title or "QR2 Page" %></title>
+   <title><%= page_title or "Fire in Vanadiel" %></title>
    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
    <link rel="stylesheet" type="text/css" href="/static/styles/layoutsheet.css" />
 </head>
 <body>
    <div id="top_splash_two">
-      QR Two
+      Fire in Vana'diel
    </div>
    <div id="nav_bar">
       <a class="nav_button" href="<%= url_for( "home" ) %>" >

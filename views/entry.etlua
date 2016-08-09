@@ -1,0 +1,59 @@
+<!-- views/entry.etlua -->
+	
+<!-- render strings straight -->
+<% if ( type( current_entry.content ) == "string" ) then %>
+   <p style="font-size:22px;"><%- current_entry.content %></p>
+<!-- render for abilities -->
+<% else %>
+   <% if( current_entry.content.blurb ) then %>
+      <p style="font-size:18px;"><%- current_entry.content.blurb %></p>
+   <% end %>
+   <% if( current_entry.content.type == "ability" ) then %>
+      <table id="ability_tab" border="1" cellspace="3">
+         <tr>
+            <td>Name</td><td>Level</td><td>Type</td><td>Description</tv>
+         </tr>
+         <% for _,entry in ipairs( current_entry.content ) do %>
+            <tr>
+               <td><%- entry.name %></td>
+               <td><%- entry.level%></td>
+               <td><%- entry.type %></td>
+               <td><%- entry.desc %></td>
+            </tr>
+         <% end %>
+      </table>
+   <!-- render for weaponskills -->
+   <% elseif( current_entry.content.type == "weaponskill" ) then %>
+      <!-- will likely need to do it's own table setup someday -->
+      <table id="ability_tab" border="1" cellspace="3">
+         <tr>
+            <td>Name</td><td>Skill Level</td><td>Weapon</td><td>Description</tv>
+         </tr>
+         <% for _,entry in ipairs( current_entry.content ) do %>
+            <tr>
+               <td><%- entry.name %></td>
+               <td><%- entry.skill_level%></td>
+               <td><%- entry.weapon %></td>
+               <td><%- entry.desc %></td>
+            </tr>
+         <% end %>
+      </table>
+   <% elseif( current_entry.content.type == "combo_chart" ) then %>
+      <!-- render for combo chart  -->
+      <table id="combo_tab" border="1" cellspace="3">
+         <tr>
+            <td>Name</td><td>Chart Value</td><td>Number of Hits</td><td>Secondary Modifiers</td><td>Description</tv>
+         </tr>
+         <% for _,entry in ipairs( current_entry.content ) do %>
+            <tr>
+               <td><%- entry.name %></td>
+               <td><%- entry.chart_value%></td>
+               <td><%- entry.num_hits%></td>
+               <td><%- entry.secondary_modifiers%></td>
+               <td><%- entry.desc %></td>
+            </tr>
+         <% end %>
+      </table>
+   <% end %>
+<% end %>
+

@@ -20,7 +20,7 @@
          <% for _,entry in ipairs( wiki[selected].content.body ) do %>
             <a name="<%= title %>"></a>
             <h2 style="font-size:30px;" ><%= entry.anchor %></h2>
-            <p style="font-size:22px;"><%- entry.content %></p>
+            <% render( "views.entry", { current_entry = entry } ) %>
          <% end %>
       </div>
    <% end %>
